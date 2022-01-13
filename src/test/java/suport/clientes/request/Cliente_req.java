@@ -36,6 +36,7 @@ public class Cliente_req {
                     .header("Content-Type", "application/json")
                     .when()
 //                    .log().all()
+                    .body(jsonData)
                     .post();
         }catch (Exception e) {
             System.err.println(e);

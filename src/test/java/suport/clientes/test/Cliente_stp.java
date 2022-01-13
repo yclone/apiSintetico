@@ -40,7 +40,8 @@ public class Cliente_stp extends Cliente_req {
         } catch (IOException e){
             System.err.println(e);
         }
-
+        System.out.println(jsonvalido);
         response = Post_cliente(url, jsonvalido);
+//        response.then().log().all();
     }
 }

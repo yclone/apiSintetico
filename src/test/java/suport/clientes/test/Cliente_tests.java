@@ -6,11 +6,11 @@ import suport.clientes.request.Cliente_req;
 
 import java.io.IOException;
 
-public class Cliente_stp extends Cliente_req {
+public class Cliente_tests extends Cliente_req {
 
     Response response;
 
-    public Cliente_stp() {
+    public Cliente_tests() {
     }
 
     public void consultaCliente(String url) {

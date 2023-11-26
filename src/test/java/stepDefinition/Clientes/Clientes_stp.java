@@ -5,15 +5,15 @@ import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
 import org.junit.Assert;
 import stepDefinition.Comons_stp;
-import suport.clientes.test.Cliente_stp;
+import suport.clientes.test.Cliente_tests;
 
 public class Clientes_stp {
 
-    Cliente_stp cliente;
+    Cliente_tests cliente;
 
     @Quando("eu consulto a lista de clientes")
     public void euConsultoAListaDeClientes() {
-        cliente = new Cliente_stp();
+        cliente = new Cliente_tests();
         cliente.consultaCliente(Comons_stp.getUrl());
     }
 
@@ -29,7 +29,7 @@ public class Clientes_stp {
 
     @Quando("eu insiro um cliente com o Nome {string}")
     public void euInsiroUmClienteComONome(String arg0) {
-        cliente = new Cliente_stp();
+        cliente = new Cliente_tests();
         cliente.InsereCliente(Comons_stp.getUrl(), arg0, "MassaUsuario.json");
     }
 

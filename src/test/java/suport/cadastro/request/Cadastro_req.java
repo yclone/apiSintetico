@@ -1,13 +1,13 @@
-package suport.clientes.request;
+package suport.cadastro.request;
 
-import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
-import static io.restassured.RestAssured.*;
+import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.useRelaxedHTTPSValidation;
 
-public class Cliente_req {
+public class Cadastro_req {
 
-    public Response Get_cliente(String url){
+    public Response Get_Cadastro(String url){
         useRelaxedHTTPSValidation();
         Response res = null;
 //        RequestSpecification requestSpec= RestAssured.given().baseUri("Some Base URI").basePath("/SomeBasePath");
@@ -26,13 +26,13 @@ public class Cliente_req {
         return res;
     }
 
-    public Response Post_cliente(String url, String jsonData){
+    public Response Post_cadastro(String url, String jsonData){
         useRelaxedHTTPSValidation();
         Response res = null;
         try {
             res = given()
                     .baseUri(url)
-                    .basePath("/clientes/create")
+                    .basePath("/user")
                     .header("Content-Type", "application/json")
                     .when()
 //                    .log().all()
